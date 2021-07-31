@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Edit the post</h1>
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Yangilash">
+</form>
+<p>
+    <a href="{% url 'post_delete' post.pk %}">Postni o`chirish</a>
+</p>
+{% endblock content %}
